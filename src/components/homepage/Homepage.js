@@ -1,9 +1,15 @@
+import BookCard from "./BookCard";
 import { Header } from "./Header"
 
-export const Homepage = () => {
+const Homepage = () => {
     return (
         <div>
             <Header />
+            <div>
+                <BookCard />
+            </div>
         </div>
     )
 }
+
+export default Homepage;
