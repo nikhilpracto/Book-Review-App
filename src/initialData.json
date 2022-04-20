@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Beowulf: A New Verse Translation",
+        "author": "Seamus Heaney",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780393320978_p0_v2_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 5
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780743273565_p0_v14_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 5
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The Godfather",
+        "author": "Mario Puzo",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780451205766_p0_v5_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 5
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    }
+]
