@@ -1,3 +1,7 @@
 .reviews {
-    
+    border-radius: 19px;
+    padding: 1rem;
+    background: linear-gradient(315deg, #ffffff, #f0f0f0);
+    box-shadow: -15px -15px 26px #d7d7d7,
+        15px 15px 26px #e9e9e9;
 }

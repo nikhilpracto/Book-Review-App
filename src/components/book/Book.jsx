@@ -7,6 +7,8 @@ import { RatingStar } from "rating-star"
 import Review from './Review'
 import Warning from "./Warning"
 import "./Book.css"
+import { useNavigate } from "react-router-dom";
+import Error from "../error/Error"
 
 const mapStateToProps = (state) => {
     return {
@@ -24,39 +26,57 @@ const mapDispatchToProps = (dispatch) => {
 const Book = ({ getBooks, updateState }) => {
     const [rating, setRating] = useState(0);
     const [visible, setVisible] = useState(false);
+    const navigate = useNavigate();
 
     const onRatingChange = score => {
         setRating(score);
     }
 
     let BookDatabase = localStorage.getItem("BookDatabase");
+    
     const [searchParams] = useSearchParams();
+
     const id = searchParams.get("id");
+    if (BookDatabase == null || id == null) {
+        return (
+            <div>
+                <Error />
+            </div>
+        )
+    }
     const books = JSON.parse(localStorage.getItem("BookDatabase"));
 
     BookDatabase = books.filter((data) => {
         return data.id == id;
     });
+    if (BookDatabase[0] == undefined) {
+        return (
+            <div>
+                <Error />
+            </div>
+        )
+    }
     const currentBook = BookDatabase[0];
     const reviewList = currentBook.reviews;
 
     const handleSubmit = (e, id) => {
         e.preventDefault();
         let currentComment = document.getElementById("comment").value.toLowerCase();
-        const restrictedWords = ["poor", "waste", "digusting", "horrible", "filthy"];
+        const restrictedWords = ["poor", "waste", "disgusting", "horrible", "filthy"];
         const replacedWords = ["p**r", "w***e", "d*******g", "h******e", "f****y"];
-        if (currentComment === "") return;
+        if (currentComment === "") {
+            alert("Please add a comment");
+            return;
+        }
         let exists = false;
         for (const word of restrictedWords)
             exists = exists || currentComment.includes(word);
 
         if (exists) {
-            // console.log("ok");
             setVisible(true)
             restrictedWords.forEach((word, index) => {
-                currentComment = currentComment.replace(word, replacedWords[index]);
+                currentComment = currentComment.replaceAll(word, replacedWords[index]);
             })
-            console.log(currentComment);
             document.getElementById("comment").value = currentComment;
         } else {
             setVisible(false)
