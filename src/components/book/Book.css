@@ -9,12 +9,15 @@
     display: flex;
     margin: 3rem;
     gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .book--reviews {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 35rem;
 }
 
 .add--review {

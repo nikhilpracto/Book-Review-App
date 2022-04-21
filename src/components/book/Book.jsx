@@ -117,7 +117,7 @@ const Book = ({ getBooks, updateState }) => {
                 <div className="book--reviews">
                     <div>
                         <form className="add--review" onSubmit={(e) => handleSubmit(e, currentBook.id)}>
-                            <textarea rows={5} cols={50} id="comment" placeholder="Add a comment"></textarea>
+                            <textarea rows={5} cols={40} id="comment" placeholder="Add a comment"></textarea>
                             <div>
                                 <RatingStar
                                     clickable
