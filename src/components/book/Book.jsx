@@ -7,7 +7,6 @@ import { RatingStar } from "rating-star"
 import Review from './Review'
 import Warning from "./Warning"
 import "./Book.css"
-import { useNavigate } from "react-router-dom";
 import Error from "../error/Error"
 
 const mapStateToProps = (state) => {
@@ -26,7 +25,6 @@ const mapDispatchToProps = (dispatch) => {
 const Book = ({ getBooks, updateState }) => {
     const [rating, setRating] = useState(0);
     const [visible, setVisible] = useState(false);
-    const navigate = useNavigate();
 
     const onRatingChange = score => {
         setRating(score);
@@ -49,7 +47,7 @@ const Book = ({ getBooks, updateState }) => {
     BookDatabase = books.filter((data) => {
         return data.id == id;
     });
-    if (BookDatabase[0] == undefined) {
+    if (BookDatabase[0] === undefined) {
         return (
             <div>
                 <Error />
@@ -116,6 +114,7 @@ const Book = ({ getBooks, updateState }) => {
                 </div>
                 <div className="book--reviews">
                     <div>
+                        <h2>What are your thoughts on this book?</h2>
                         <form className="add--review" onSubmit={(e) => handleSubmit(e, currentBook.id)}>
                             <textarea rows={5} cols={40} id="comment" placeholder="Add a comment"></textarea>
                             <div>
@@ -133,6 +132,7 @@ const Book = ({ getBooks, updateState }) => {
                     </div>
 
                     <div className="check--reviews">
+                        <h2>Read Book Reviews</h2>
                         {
                             reviewList.map((review) => {
                                 return <Review key={review.review_id} reviews={review} />

@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 const Homepage = ({ getBooks, BookList }) => {
     useEffect(() => {
         getBooks()
-    }, [])
+    })
 
     let database;
 
