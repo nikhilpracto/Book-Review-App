@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export const Book = ({ updateState }) => {
+const Book = ({ getBooks, updateState = "1" }) => {
     const [rating, setRating] = useState(0);
     const [visible, setVisible] = useState(false);
 
