@@ -1,0 +1,47 @@
+.modal {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 20rem;
+    padding: 6rem;
+    background-color: #f3f3f3;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btn--modal-yes {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+#btn--modal-no {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 25px;
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 import BookCover from "../shared/bookCover"
 import StarRating from "../shared/starRating"
 import { Link } from 'react-router-dom'
+import "./BookCard.css"
 
 const BookCard = (props) => {
     let sum = 0;
@@ -12,8 +13,8 @@ const BookCard = (props) => {
         <div className="bookCard">
             <Link to={URL} style={{ textDecoration: "none", color: "black" }}>
                 <BookCover link={props.book.cover_image} />
-                <h2>Title: {props.book.title}</h2>
-                <h2>Author: {props.book.author}</h2>
+                <div><strong>Title:</strong> {props.book.title}</div>
+                <div><strong>Author:</strong> {props.book.author}</div>
                 <StarRating rating={averageRating} />
             </Link>
         </div>

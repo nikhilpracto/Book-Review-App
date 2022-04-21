@@ -1,0 +1,58 @@
+.book--page {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.book--details {
+    display: flex;
+    margin: 2rem;
+    gap: 5rem;
+}
+
+.book--reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add--review {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.add--review textarea {
+    padding: 1rem;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    border: 1px solid slategray;
+    border-radius: 1rem;
+}
+
+.add--review button {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}

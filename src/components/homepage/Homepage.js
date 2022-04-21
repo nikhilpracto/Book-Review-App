@@ -2,6 +2,7 @@ import BookCard from "./BookCard";
 import { Header } from "./Header"
 import { connect } from 'react-redux'
 import { useEffect } from "react";
+import './Homepage.css'
 
 const mapStateToProps = (state) => {
     return {
