@@ -8,7 +8,7 @@
             {
                 "review_id": 1,
                 "comment": "amazing",
-                "rating": 5
+                "rating": 1
             },
             {
                 "review_id": 2,
@@ -44,7 +44,133 @@
             {
                 "review_id": 1,
                 "comment": "amazing",
+                "rating": 3
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "A Clockwork Orange",
+        "author": "Anthony Burgess",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780393312836_p0_v1_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 4
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "The Hate U Give",
+        "author": "Angie Thomas",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780062498533_p0_v14_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 1
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Look Who's Back",
+        "author": "Timur Vermes",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9781681449524_p0_v1_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 2
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "A Million Little Pieces",
+        "author": "James Frey",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780307276902_p0_v4_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
                 "rating": 5
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 2
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Stranger",
+        "author": "Albert Camus",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780679720201_p0_v3_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 5
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 1
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "The Handmaid's Tale",
+        "author": "Margaret Atwood",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780385490818_p0_v5_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 1
+            },
+            {
+                "review_id": 2,
+                "comment": "amazing very good book",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "cover_image": "https://prodimage.images-bn.com/pimages/9780060850524_p0_v3_s192x300.jpg",
+        "reviews": [
+            {
+                "review_id": 1,
+                "comment": "amazing",
+                "rating": 1
             },
             {
                 "review_id": 2,
