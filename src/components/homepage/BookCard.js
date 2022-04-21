@@ -13,8 +13,8 @@ const BookCard = (props) => {
         <div className="bookCard">
             <Link to={URL} style={{ textDecoration: "none", color: "black" }}>
                 <BookCover link={props.book.cover_image} />
-                <div><strong>Title:</strong> {props.book.title}</div>
-                <div><strong>Author:</strong> {props.book.author}</div>
+                <div className="book--title">{props.book.title}</div>
+                <div className="book--author"><strong>Author:</strong> {props.book.author}</div>
                 <StarRating rating={averageRating} />
             </Link>
         </div>

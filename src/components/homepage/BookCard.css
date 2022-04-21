@@ -1,11 +1,23 @@
 .bookCard {
     text-decoration: none;
-    width: 290px;
+    width: 270px;
     word-wrap: break-word;
     padding: 1rem 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     border-radius: 1rem;
     box-shadow: -3px -3px 7px #ffffff,
         3px 3px 5px #ceced1;
     background: #ecf0f3;
+}
+
+.book--title {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.book--author {
+    padding: 0.5rem;
+    color: darkslategray;
 }
