@@ -31,7 +31,7 @@ const Book = ({ getBooks, updateState }) => {
     }
 
     let BookDatabase = localStorage.getItem("BookDatabase");
-    
+
     const [searchParams] = useSearchParams();
 
     const id = searchParams.get("id");
@@ -45,7 +45,7 @@ const Book = ({ getBooks, updateState }) => {
     const books = JSON.parse(localStorage.getItem("BookDatabase"));
 
     BookDatabase = books.filter((data) => {
-        return data.id == id;
+        return data.id === Number(id);
     });
     if (BookDatabase[0] === undefined) {
         return (
@@ -57,32 +57,31 @@ const Book = ({ getBooks, updateState }) => {
     const currentBook = BookDatabase[0];
     const reviewList = currentBook.reviews;
 
-    const handleSubmit = (e, id) => {
+    const handleSubmit = (e, id, flag) => {
         e.preventDefault();
         let currentComment = document.getElementById("comment").value.toLowerCase();
         const restrictedWords = ["poor", "waste", "disgusting", "horrible", "filthy"];
         const replacedWords = ["p**r", "w***e", "d*******g", "h******e", "f****y"];
-        if (currentComment === "") {
-            alert("Please add a comment");
+        if (currentComment === "" || rating === 0) {
+            alert("Please add a comment and select rating");
             return;
         }
         let exists = false;
         for (const word of restrictedWords)
             exists = exists || currentComment.includes(word);
 
-        if (exists) {
+        if (exists && flag) {
             setVisible(true)
-            restrictedWords.forEach((word, index) => {
-                currentComment = currentComment.replaceAll(word, replacedWords[index]);
-            })
-            document.getElementById("comment").value = currentComment;
         } else {
             setVisible(false)
             document.getElementById("comment").value = "";
             setRating(0)
+            restrictedWords.forEach((word, index) => {
+                currentComment = currentComment.replaceAll(word, replacedWords[index]);
+            })
             const currDatabase = JSON.parse(localStorage.getItem("BookDatabase"))
             const result = currDatabase.map((book) => {
-                if (book.id == id) {
+                if (book.id === Number(id)) {
                     return {
                         ...book,
                         reviews: [
@@ -115,7 +114,7 @@ const Book = ({ getBooks, updateState }) => {
                 <div className="book--reviews">
                     <div>
                         <h2>What are your thoughts on this book?</h2>
-                        <form className="add--review" onSubmit={(e) => handleSubmit(e, currentBook.id)}>
+                        <form className="add--review" onSubmit={(e) => handleSubmit(e, currentBook.id, true)}>
                             <textarea rows={5} cols={40} id="comment" placeholder="Add a comment"></textarea>
                             <div>
                                 <RatingStar
@@ -141,7 +140,7 @@ const Book = ({ getBooks, updateState }) => {
                     </div>
                 </div>
             </div>
-            <Warning id={currentBook.id} handleSubmit={handleSubmit} onClose={() => setVisible(false)} visible={visible} />
+            <Warning id={currentBook.id} handleSubmit={handleSubmit} onClose={() => { setVisible(false); }} visible={visible} />
             <div className="overlay hidden"></div>
         </div>
     )

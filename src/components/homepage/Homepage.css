@@ -1,7 +1,8 @@
 .book--dashboard {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 3rem;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
 }
